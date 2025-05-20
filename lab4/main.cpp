@@ -1,32 +1,21 @@
-#include "MTBicycle.h"
-#include "RoadBicycle.h"
 #include <iostream>
+#include <string>
+
+#include "Laptop.h"
+#include "Gaming.h"
+#include "Folding.h"
+#include "Ultrabook.h"
+#include "Buisiness.h"
+#include "Convertible.h"
+
+using namespace std;
 
 int main() {
-    MTBDetails mtbDetails("Carbon", "Red", "Full");
-    MTBicycle mtb("Trek", "X-Caliber", 21, 13.5f, mtbDetails);
+  Gaming *gaming_laptop = new Gaming();
+  Folding *folding_laptop = new Folding();
+  Ultrabook *ultrabook_laptop = new Ultrabook();
 
-    RoadDetails roadDetails("Aluminum", "Blue", "Drop");
-    RoadBicycle roadBike("Giant", "Defy", 18, 9.8f, roadDetails);
-
-    std::cout << "Mountain Bike Info:" << std::endl;
-    mtb.displayInfo();
-    mtb.ride();
-    mtb.brake();
-
-    std::cout << "\nRoad Bike Info:" << std::endl;
-    roadBike.displayInfo();
-    roadBike.ride();
-    roadBike.brake();
-
-
-    std::cout << "\n\n--------------------\n\n";
-    RoadDetails newDetails("Carbon", "Black", "Ergo");
-    roadBike.upgradeDetails(newDetails);
-
-    roadBike.displayInfo();
-    roadBike.getDetails().display();
-    
-
-    return 0;
+  cout << "Gaming laptop: "; gaming_laptop->showSpecs();
+  cout << "Folding laptop: "; folding_laptop->showSpecs();
+  cout << "Ultrabook laptop: "; ultrabook_laptop->showSpecs();
 }

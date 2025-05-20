@@ -2,7 +2,7 @@ CC=g++
 CFLAGS=-c -Wextra -O0 -g
 
 TARGET=package
-SOURCES = main.cpp Bicycle.cpp Details.cpp MTBDetails.cpp MTBicycle.cpp RoadBicycle.cpp RoadDetails.cpp
+SOURCES = main.cpp Laptop.cpp Gaming.cpp Folding.cpp Convertible.cpp Buisiness.cpp Ultrabook.cpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(TARGET)
